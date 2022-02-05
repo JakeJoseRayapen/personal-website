@@ -1,8 +1,9 @@
+from crypt import methods
 from flask import Flask , render_template , url_for ,redirect
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/" , methods = ['GET','POST'])
 def home():
     return render_template("welcome2.html")
 

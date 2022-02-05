@@ -1,0 +1,119 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #020412;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#scene {
+  width: 500px;
+  height: 500px;
+  -webkit-transition: height 5s ease;
+  transition: height 5s ease;
+  -o-transition: height 5s ease;
+  -webkit-transition: width 2s ease;
+  transition: width 2s ease;
+  -o-transition: width 2s ease;
+}
+
+@media screen and (max-width: 35rem) {
+  #scene {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+#text {
+  color: #5dea62;
+  font-family: Monaco, monospace;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  animation: 120ms infinite normal glitch;
+}
+
+span {
+  animation: 1500ms infinite normal cursor;
+}
+
+@keyframes glitch {
+  0% {
+    opacity: 0;
+    left: 0px;
+  }
+  40% {
+    opacity: 1;
+    left: -2px;
+  }
+  80% {
+    opacity: 1;
+    left: -2px;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+    left: 0px;
+  }
+  40% {
+    opacity: 0;
+    left: -2px;
+  }
+  80% {
+    opacity: 1;
+    left: -2px;
+  }
+}
+
+.enter {
+  position: relative;
+  width: 180px;
+  height: 60px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  transition: 0.5s;
+}
+
+.bg-1 {
+  margin-top: 40px;
+}
+
+a.bt {
+  padding: 12px 24px 14px;
+  background: rgba(black, 0.24);
+  border: 2px solid #85c9c8;
+  border-radius: 4px;
+  border-width: 0 2px;
+
+  font-size: 16px;
+  font-family: courier new, serif;
+  color: #85c9c8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: #fff 0 0 0, #85c9c8 0 0 0;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, text-shadow 0.3s ease-in-out,
+    box-shadow 0.45s ease-in-out, padding 0.3s ease-in-out 0.3s,
+    letter-spacing 0.3s ease-in-out 0.15s;
+
+  transform: scale(1.5);
+}
+
+.bt:hover {
+  padding: 12px 48px 14px;
+  background: rgba(black, 0.8);
+  letter-spacing: 6px;
+  text-shadow: #fff 0 0 3px, #85c9c8 0 0 15px;
+  box-shadow: #fff 0 0 3px, rgba(#85c9c8, 0.4) 0 0 15px;
+}

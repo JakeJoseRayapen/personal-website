@@ -59,6 +59,6 @@ function backgroundChange(){
     matrix.style.display = 'block';
     setInterval(draw,33);
     setTimeout(() => {
-        window.location.href ="http://127.0.0.1:5000/index";
+        window.location.href ="/index";
     }, 6000)
 }

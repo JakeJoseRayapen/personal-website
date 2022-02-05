@@ -260,7 +260,7 @@ window.addEventListener('scroll', () => {
     }else if(screen.width > 1023){
         setTimeout( () => {
             green1.forEach( green => {
-                if(topLink > 3600 && topLink < 5000 ){
+                if(topLink > 3800 && topLink < 5000 ){
                     green.classList.add('purple-tv');
                 }else{
                     green.classList.remove('purple-tv');
@@ -270,7 +270,7 @@ window.addEventListener('scroll', () => {
     
         setTimeout( () => {
             green2.forEach( green => {
-            if(topLink > 3600 && topLink < 5000){
+            if(topLink > 3800 && topLink < 5000){
                 green.classList.add('purple-tv');
             }else{
                 green.classList.remove('purple-tv');
@@ -279,7 +279,7 @@ window.addEventListener('scroll', () => {
         },1000)
     
         setTimeout( () => {
-            if( topLink > 3600 && topLink < 5000 ){
+            if( topLink > 3800 && topLink < 5000 ){
                 green3.classList.add('purple-tv');
             }else{
                 green3.classList.remove('purple-tv');
@@ -287,7 +287,7 @@ window.addEventListener('scroll', () => {
         },2000)
     
         setTimeout( () => {
-            if(topLink > 3600 && topLink < 5000){
+            if(topLink > 3800 && topLink < 5000){
                 greenPower.classList.add('purple-tv');
             }else{
                 greenPower.classList.remove('purple-tv');
@@ -296,7 +296,7 @@ window.addEventListener('scroll', () => {
     
         setTimeout( () => {
                 greenVest.forEach( vest => {
-            if(topLink > 3600 && topLink < 5000){
+            if(topLink > 3800 && topLink < 5000){
                 vest.classList.add('purple-tv');
                 }else {
                     vest.classList.remove('purple-tv');
@@ -305,7 +305,7 @@ window.addEventListener('scroll', () => {
         },4000)
     
         setTimeout( () => {
-            if(topLink > 3600 && topLink < 5000){
+            if(topLink > 3800 && topLink < 5000){
                 xpozeBack.classList.add('xpoze-background');
             }else{
                 xpozeBack.classList.remove('xpoze-background');
@@ -313,7 +313,7 @@ window.addEventListener('scroll', () => {
         },5000)
     
         setTimeout( () => {
-            if(topLink > 3600 && topLink < 5000){
+            if(topLink > 3800 && topLink < 5000){
                 xpoze.classList.add('xpoze-image');
             }else{
                 xpoze.classList.remove('xpoze-image');
@@ -321,7 +321,7 @@ window.addEventListener('scroll', () => {
         },5000)
     
         setTimeout( () => {
-            if(topLink > 3600 && topLink < 5000){
+            if(topLink > 3800 && topLink < 5000){
                 xpozeButtons.classList.add('hov');
             }else{
                 xpozeButtons.classList.remove('hov');

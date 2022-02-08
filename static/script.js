@@ -22,7 +22,6 @@ window.addEventListener('scroll', () => {
     const topLink = window.pageYOffset;
     if(topLink > 500) {
         scroll.classList.add('show-link');
-        console.log(topLink);
     } else {
         scroll.classList.remove('show-link');
     }
@@ -322,6 +321,76 @@ window.addEventListener('scroll', () => {
     },5500)
 
     }else if(screen.width >= 1025){
+        setTimeout( () => {
+            green1.forEach( green => {
+                if(topLink > 3800 && topLink < 5000 ){
+                    green.classList.add('purple-tv');
+                }else{
+                    green.classList.remove('purple-tv');
+                }
+            })
+        })
+    
+        setTimeout( () => {
+            green2.forEach( green => {
+            if(topLink > 3800 && topLink < 5000){
+                green.classList.add('purple-tv');
+            }else{
+                green.classList.remove('purple-tv');
+            }
+        })
+        },1000)
+    
+        setTimeout( () => {
+            if( topLink > 3800 && topLink < 5000 ){
+                green3.classList.add('purple-tv');
+            }else{
+                green3.classList.remove('purple-tv');
+            }
+        },2000)
+    
+        setTimeout( () => {
+            if(topLink > 3800 && topLink < 5000){
+                greenPower.classList.add('purple-tv');
+            }else{
+                greenPower.classList.remove('purple-tv');
+            }
+        },3000)
+    
+        setTimeout( () => {
+                greenVest.forEach( vest => {
+            if(topLink > 3800 && topLink < 5000){
+                vest.classList.add('purple-tv');
+                }else {
+                    vest.classList.remove('purple-tv');
+                }
+            })
+        },4000)
+    
+        setTimeout( () => {
+            if(topLink > 3800 && topLink < 5000){
+                xpozeBack.classList.add('xpoze-background');
+            }else{
+                xpozeBack.classList.remove('xpoze-background');
+            }
+        },5000)
+    
+        setTimeout( () => {
+            if(topLink > 3800 && topLink < 5000){
+                xpoze.classList.add('xpoze-image');
+            }else{
+                xpoze.classList.remove('xpoze-image');
+            }
+        },5000)
+    
+        setTimeout( () => {
+            if(topLink > 3800 && topLink < 5000){
+                xpozeButtons.classList.add('hov');
+            }else{
+                xpozeButtons.classList.remove('hov');
+            }
+        },5500)    
+    }else if(screen.width >= 768 && screen.width <= 1024){
         setTimeout( () => {
             green1.forEach( green => {
                 if(topLink > 3800 && topLink < 5000 ){

@@ -119,12 +119,25 @@ html::-webkit-scrollbar {
     box-shadow: 0 0 0 #fff;
   }
 
+  .section1 {
+    min-height: 90vh !important;
+  }
+
+  .section2 {
+    min-height: 50vh !important;
+  }
+
   .section3 {
-    height: 230vh !important;
+    min-height: 100% !important;
   }
 
   .section4 {
-    height: 150vh;
+    min-height: 150vh;
+  }
+
+  .section5 {
+    min-height: 100% !important;
+    margin-bottom: 20px;
   }
 
   .tv-button {
@@ -277,7 +290,7 @@ html::-webkit-scrollbar {
 
 .section2 {
   color: white;
-  height: 100vh;
+  min-height: 100vh;
   width: 85%;
   margin: 70px auto 0;
   position: relative;
@@ -433,11 +446,21 @@ html::-webkit-scrollbar {
 
   .contact-form-wrapper {
     margin: 100px auto !important;
+    justify-content: space-between !important;
   }
 
   .description {
     margin-top: 100px;
   }
+
+  .description p {
+    margin-left: 20px;
+  }
+
+  .description span {
+    margin-left: 20px;
+  }
+
   .my-self::after {
     display: block;
     animation: ball 5s ease-in-out infinite alternate;
@@ -461,19 +484,29 @@ html::-webkit-scrollbar {
   }
 
   .section1 {
-    height: 90vh !important;
+    min-height: 90vh !important;
   }
 
   .section2 {
-    height: 90vh !important;
+    min-height: 90vh !important;
   }
 
   .section3 {
-    height: 130vh;
+    min-height: 70% !important;
+    width: 100%;
+    margin-left: 100px;
   }
 
   .section5 {
-    height: 130vh !important;
+    min-height: 120vh !important;
+    margin-left: 100px !important;
+    width: 100%;
+  }
+
+  .section4 {
+    margin-left: 50px !important;
+    width: 100vw !important;
+    min-height: 90vh !important;
   }
 
   .xpoze svg {
@@ -655,8 +688,15 @@ html::-webkit-scrollbar {
   }
 
   .top-link {
-    right: 15rem !important;
+    right: 10rem !important;
     bottom: 7rem !important;
+  }
+
+  .timeline-container {
+    height: 700px !important;
+    transform: translateX(-50px);
+    margin-top: 200px;
+    margin-bottom: 100px;
   }
 
   .timeline:before {
@@ -725,8 +765,15 @@ html::-webkit-scrollbar {
     margin-left: 20px;
   }
 
+  .xpoze-button {
+    position: absolute;
+    top: 1280px;
+    left: 120px;
+  }
+
   .xpoze-button a {
-    color: red !important;
+    padding: 7px 14px;
+    font-size: 15px !important;
   }
 }
 
@@ -750,7 +797,7 @@ html::-webkit-scrollbar {
 }
 
 .section4 {
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   position: relative;
   width: 100%;
@@ -764,10 +811,6 @@ html::-webkit-scrollbar {
 .section4 h2 {
   color: #78d492;
   font-size: 3rem;
-}
-
-section {
-  height: 100vh;
 }
 
 .contact-form-wrapper {
@@ -873,7 +916,7 @@ textarea {
   position: relative;
   margin: 20px auto;
   width: 90%;
-  height: 250vh;
+  min-height: 250vh;
   z-index: 1;
 }
 
@@ -1356,8 +1399,8 @@ svg [id*="purple"],
 }
 
 .timeline-container {
-  min-height: 100vh;
-  max-height: 150vh;
+  /* min-height: 100vh;
+  max-height: 150vh; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -1418,7 +1461,7 @@ svg [id*="purple"],
 
 @media only screen and (min-width: 1281px) {
   .section2 {
-    height: 90vh !important;
+    min-height: 90vh !important;
   }
 
   .welcome-header {
@@ -1426,6 +1469,7 @@ svg [id*="purple"],
   }
 
   .section4 {
+    min-height: 100vh !important;
     width: 100%;
     margin: 0 auto;
   }
@@ -1473,7 +1517,7 @@ svg [id*="purple"],
   }
 
   .section5 {
-    height: 140vh !important;
+    min-height: 140vh !important;
   }
 
   .xpoze-summary {
@@ -1732,11 +1776,6 @@ svg [id*="purple"],
     transform: scale(1) rotateY(-360deg);
     color: #78d492;
   }
-
-  .section4 {
-    height: 100vh !important;
-  }
-
   .timeline {
     opacity: 0.8;
   }

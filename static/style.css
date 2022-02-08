@@ -33,6 +33,7 @@ html::-webkit-scrollbar {
   height: 100%;
   list-style-type: none;
   padding: 0;
+  min-width: 580px;
 }
 
 .primary-navigation a {
@@ -49,7 +50,7 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-@media (max-width: 35em) {
+@media (max-width: 480px) {
   .primary-navigation {
     position: fixed;
     inset: 0 0 0 30%;
@@ -242,7 +243,7 @@ html::-webkit-scrollbar {
 @media (min-width: 35em) {
   .primary-navigation {
     padding-block: 0.5 rem;
-    padding-inline: clamp(2vw, 8vw, 12rem);
+    padding-inline: clamp(1vw, 8vw, 12rem);
     background-color: transparent;
   }
   .primary-navigation li {
@@ -375,7 +376,11 @@ html::-webkit-scrollbar {
   font-size: 50px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    width: 100% !important;
+  }
+
   .my-self {
     width: 400px;
     font-size: 2.5rem;
@@ -447,7 +452,7 @@ html::-webkit-scrollbar {
     0% {
       transform: translateX(0);
     }
-    56% {
+    45% {
       z-index: -999;
     }
     100% {
@@ -464,11 +469,11 @@ html::-webkit-scrollbar {
   }
 
   .section3 {
-    height: 120vh;
+    height: 130vh;
   }
 
   .section5 {
-    height: 150vh !important;
+    height: 130vh !important;
   }
 
   .xpoze svg {
@@ -486,7 +491,7 @@ html::-webkit-scrollbar {
   }
 
   .casa-summary {
-    top: 350px;
+    top: 380px;
   }
 
   .project1 {
@@ -494,9 +499,13 @@ html::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
   }
+
+  .social-media {
+    margin-left: 20px;
+  }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1281px) {
   .my-self {
     width: 400px;
     font-size: 2.5rem;
@@ -522,7 +531,7 @@ html::-webkit-scrollbar {
   .section3 {
     margin: 150px auto 70px;
     min-height: 100vh;
-    height: 190vh;
+    height: 140vh;
   }
 
   .text-skills {
@@ -638,11 +647,16 @@ html::-webkit-scrollbar {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .welcome-header {
     transform: translateY(190px);
     text-align: center;
     color: #78d492;
+  }
+
+  .top-link {
+    right: 15rem !important;
+    bottom: 7rem !important;
   }
 
   .timeline:before {
@@ -695,6 +709,24 @@ html::-webkit-scrollbar {
 
   .timeline-content p {
     display: none;
+  }
+
+  .tv-button {
+    position: absolute;
+    top: 490px;
+    left: 110px;
+  }
+
+  .tv-button a {
+    padding: 7px 14px !important;
+  }
+
+  .tv-button .image-slider {
+    margin-left: 20px;
+  }
+
+  .xpoze-button a {
+    color: red !important;
   }
 }
 
@@ -802,7 +834,7 @@ textarea {
   animation: bounce 2s ease-in-out infinite;
   -webkit-animation: bounce 2s ease-in-out infinite;
   -o-animation: bounce 2s ease-in-out infinite;
-  visibility: hidden;
+  visibility: visible;
   z-index: -100;
 }
 
@@ -1325,6 +1357,7 @@ svg [id*="purple"],
 
 .timeline-container {
   min-height: 100vh;
+  max-height: 150vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1360,6 +1393,10 @@ svg [id*="purple"],
   width: 100%;
 }
 
+.timeline ul p {
+  display: none;
+}
+
 .timeline ul li:last-child {
   margin-bottom: 0;
 }
@@ -1379,7 +1416,7 @@ svg [id*="purple"],
   width: 100%;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1281px) {
   .section2 {
     height: 90vh !important;
   }

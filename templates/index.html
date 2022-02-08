@@ -71,6 +71,7 @@
             <div class="card" id="Bottom"></div>
           </div>
           <a class="box-button" data-title="Hobbies"></a>
+          <h1 class="hobbies">H<span>O</span><span>B</span><span>B</span><span>I</span><span>E</span><span>S</span></h1>
         </div>
     </section>
 
@@ -89,30 +90,43 @@
                     <span>I'm still Learnin' casue i have a long way to go</span>
             </div>
             <div class="timeline-container">
+              <h1>Education Roadmap</h1>
                <div class="timeline">
                   <ul>
                     <li>
                       <div class="timeline-content">
-                        <h1>Heading 1</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio ab neque saepe quaerat atqu.</p>
+                        <h1>Responsive Web Design Certification</h1>
+                        <p>The first step of 12 Certifications on freecodecamp,this one is about HTML and CSS.</p>
                       </div>
                     </li>
                     <li>
                       <div class="timeline-content">
-                        <h1>Heading 2</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio ab neque saepe quaerat atque cumque,</p>
+                        <h1>Javascript algorithms Certification</h1>
+                        <p>Certification for javascript algorithms </p>
                       </div>
                     </li>
                     <li>
                       <div class="timeline-content">
-                        <h1>Heading 3</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio ab neque saepe quaerat atque cumque, </p>
+                        <h1>CS50's Introduction to Computer Science</h1>
+                        <p>An introduction to the intellectual enterprises of computer science and the art of programming taught by David J.Malan</p>
                       </div>
                     </li>
                     <li>
                       <div class="timeline-content">
-                        <h1>Heading 4</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio ab neque saepe quaerat atque cumque</p>
+                        <h1>CS50's Web Programming with Python and JavaScript</h1>
+                        <p>This course picks up where CS50 leaves off, diving more deeply into the design and implementation of web apps with Python, JavaScript, and SQL using frameworks like Django, React, and Bootstrap taught by David J.Malan</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-content">
+                        <h1>Prepare for machine learning</h1>
+                        <p>Strengthen my basics in Statistics, Linear Algebra, Probability, and Calculus before taking the machine learning course.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="timeline-content">
+                        <h1>Andrew Ng's machine learning course</h1>
+                        <p>im gonna try and get a feel for machine learning and see if i like it.</p>
                       </div>
                     </li>
                   </ul>
@@ -333,8 +347,17 @@
         </div>
         </div>
         <div class="casa-summary" data-aos="fade-up">
-          <h1>Summary</h1>
-          <p>As fellow cs50 students,me and <a href='https://github.com/leoalano'>leo</a> sometimes would talk about Bitcoin,leo is a big bitcoin.Having already made a finance website for one of the cs50 problem , we felt inspired to make a bitcoin site of our own</p>
+          <h1>About</h1>
+          <h3 class="casa-made-with">Made with:
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </h3>
+          <p>As fellow cs50 students,me and <a href='https://github.com/leoalano'>leo</a> sometimes would talk about Bitcoin,leo is a big bitcoin enthusiast.Having already made a finance website for one of the cs50 problem , we felt inspired to make a bitcoin site of our own</p>
         </div>
       </div>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" >
@@ -506,8 +529,9 @@
           </div>
       </div>
       <div class="xpoze-summary" data-aos="fade-up">
-        <h1>Summary</h1>
+        <h1>About</h1>
         <p>Xpoze started out as a clan of 6 friends 3 years ago and has since then grown to a community of over 900 people.It is currently being managed by <a>Keith</a>.</p>
+        <p>This side project is on hold until i am done with CS50Web so i can practice with new frameworks.</p>
       </div>
       </div>
     </section>
@@ -557,6 +581,69 @@
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!--by mattboldt on github-->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script src="{{ url_for('static',filename='anime.min.js') }}"></script>
+        <script>
+         var anime = anime.timeline({
+            loop:false,
+            autoplay:false
+          })
+
+          .add({
+                targets : '.hobbies span:nth-child(1)',
+                easing: 'easeInElastic(1,.6)',
+                duration: 1500,
+                color: '#78d492',
+                opacity: [0,1],
+                translateY: [270,0]
+
+           })   
+           .add({
+                targets : '.hobbies span:nth-child(2)',
+                easing: 'easeOutElastic(1,.6)',
+                duration: 1500,
+                color: '#78d492',
+                opacity: [0,1],
+                translateY: [270,0]
+           })
+           .add({
+                targets : '.hobbies span:nth-child(3)',
+                easing: 'easeInOutElastic(1,.6)',
+                duration: 1500,
+                color: '#78d492',
+                opacity: [0,1],
+                translateY: [270,0]
+           })
+           .add({
+                targets : '.hobbies span:nth-child(4)',
+                easing: 'easeOutInElastic(1,.6)',
+                duration: 1500,
+                color: '#78d492',
+                opacity: [0,1],
+                translateY: [270,0]
+           })
+           .add({
+                targets : '.hobbies span:nth-child(5)',
+                easing: 'easeInElastic(1,.6)',
+                duration: 1500,
+                color: '#78d492',
+                opacity: [0,1],
+                translateY: [270,0]
+           })   
+           .add({
+                targets : '.hobbies span:nth-child(6)',
+                easing: 'easeOutElastic(1,.6)',
+                duration: 1500,
+                color: '#78d492',
+                opacity: [0,1],
+                translateY: [270,0]
+           });
+              document.querySelector('.box-button').addEventListener('click',()=>{
+                setTimeout( ()=>{
+                  anime.play();
+                },1000)
+              })
+
+        </script>
         <script src="{{ url_for('static',filename='vanilla-tilt.min.js')}}"></script>
         <script>
           VanillaTilt.init(document.querySelectorAll(".sci li a"), {
@@ -564,7 +651,6 @@
               speed: 400,
               glare: true,
               "max-glare": 1,
-              
           });
         </script>
         <script>

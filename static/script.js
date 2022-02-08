@@ -109,7 +109,7 @@ window.addEventListener('scroll',()=>{
 
             purple1.forEach( purp => 
                 {
-            if(topLink > 3180 && topLink < 4500){
+            if(topLink > 3180 && topLink < 5000){
                     purp.classList.add('tv-glow');
             } else {
                 purp.classList.remove('tv-glow');
@@ -118,7 +118,7 @@ window.addEventListener('scroll',()=>{
 
         setTimeout( () => {
             purple2.forEach( purp => {
-                if(topLink > 3180 && topLink < 4500){
+                if(topLink > 3180 && topLink < 5000){
                     purp.classList.add('tv-glow');
                 } else {
                     purp.classList.remove('tv-glow');
@@ -127,7 +127,7 @@ window.addEventListener('scroll',()=>{
         },1000);
 
         setTimeout( () => {
-            if(topLink > 3180 && topLink < 4500){
+            if(topLink > 3180 && topLink < 5000){
                 purple3.classList.add('purple-glow');
             } else {
                 purple3.classList.remove('purple-glow');
@@ -135,7 +135,7 @@ window.addEventListener('scroll',()=>{
         },2000);
 
         setTimeout( () => {
-            if(topLink > 3180 && topLink < 4500){
+            if(topLink > 3180 && topLink < 5000){
                 purple4.classList.add('tv-glow');
             } else {
                 purple4.classList.remove('tv-glow');
@@ -144,7 +144,7 @@ window.addEventListener('scroll',()=>{
         },3000);
 
         setTimeout( () => {
-            if(topLink > 3180 && topLink < 4500) {
+            if(topLink > 3180 && topLink < 5000) {
                 backGround.classList.add('tv-screen')
             }else{
                 backGround.classList.remove('tv-screen')
@@ -152,7 +152,7 @@ window.addEventListener('scroll',()=>{
         },4000);
 
         setTimeout( () => {
-            if(topLink > 3180 && topLink <4500) {
+            if(topLink > 3180 && topLink <5000) {
                 image.classList.add('image-tv');
             }else{
                 image.classList.remove('image-tv');
@@ -162,7 +162,7 @@ window.addEventListener('scroll',()=>{
 
         setTimeout( () => {
                 tvButtons.forEach( button => {
-                    if(topLink > 3180 && topLink < 4500){
+                    if(topLink > 3180 && topLink < 5000){
                         button.classList.add('hov');
                     }else{
                         button.classList.remove('hov');
@@ -340,6 +340,7 @@ let popUp = document.querySelector('#carouselExampleFade');
 let project1 = document.querySelector('.project1');
 let projectsHeader = document.querySelector('.projects-header');
 let linkedIn = document.querySelector('.linked-in');
+let xpozE = document.querySelector('.xpoze');
 
 imageSlider.addEventListener('click', () => {
     popUp.classList.add('visible');
@@ -347,6 +348,7 @@ imageSlider.addEventListener('click', () => {
     blur.style.width = '100%';
     project1.style.display = "none";
     projectsHeader.style.display = "none";
+    xpozE.style.display = 'none';
 });
 
 blur.addEventListener('click', (event) => {
@@ -356,6 +358,7 @@ blur.addEventListener('click', (event) => {
         project1.style.display = "block";
         projectsHeader.style.display = "block";
         blur.style.width = '90%';
+        xpozE.style.display = 'block';
     }
 })
 
@@ -365,16 +368,16 @@ linkedIn.addEventListener('click',() => {
 })
 
 let list = document.querySelectorAll('.sci li');
-let bg = document.querySelector('.section4');
+let bg1 = document.querySelector('.section4');
 
 list.forEach( el => {
     el.addEventListener('mouseenter', (event) =>{
         let color = event.target.getAttribute('data-color');
-        bg.style.backgroundColor = color;
+        bg1.style.backgroundColor = color;
     })
     el.addEventListener('mouseleave', (event) =>{
         let color = event.target.getAttribute('data-color');
-        bg.style.backgroundColor = 'transparent';
+        bg1.style.backgroundColor = 'transparent';
     })
 })
 
@@ -389,7 +392,6 @@ let toP = document.querySelector('#Top')
 
 document.querySelector('.box-button').addEventListener('click', () => {
     box.style.animation = 'none';
-
     left.style.right = '180px';
     right.style.left = '180px';
     toP.style.bottom = '180px';
@@ -403,6 +405,7 @@ document.querySelector('.box-button').addEventListener('click', () => {
             bottom.style.top = '125px';
             setTimeout( () => {
                 bottom.classList.add('fly')
+                document.querySelector('.hobbies').style.display = 'block';
             },500)
     
         },500)
@@ -442,5 +445,9 @@ document.querySelector('.box-button').addEventListener('click', () => {
             },500)
         },5500)
     },1000)
+
+        setTimeout( () =>{
+            anime.play;
+        },7000)
 
 })

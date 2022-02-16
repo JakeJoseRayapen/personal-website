@@ -1,3 +1,4 @@
+
 // hamburger for mobile users
 
 const primaryNav = document.querySelector(".primary-navigation");
@@ -14,20 +15,85 @@ navToggle.addEventListener('click' , () => {
     }
 });
 
+// ============== Hobbies cube ====================================================================
 
-// icon functionality 
-const scroll = document.querySelector('.top-link');
+let box = document.querySelector('.box');
+let left = document.querySelector('#Left')
+let right = document.querySelector('#Right')
+let bottom = document.querySelector('#Bottom')
+let front = document.querySelector('#Front')
+let back = document.querySelector('#Back')
+let toP = document.querySelector('#Top')
 
-window.addEventListener('scroll', () => {
-    const topLink = window.pageYOffset;
-    if(topLink > 500) {
-        scroll.classList.add('show-link');
-    } else {
-        scroll.classList.remove('show-link');
+document.querySelector('.box-button').addEventListener('click', () => {
+    box.style.animation = 'none';
+    left.style.right = '180px';
+    right.style.left = '180px';
+    toP.style.bottom = '180px';
+    bottom.style.top = '180px';
+    back.style.transform = 'translateZ(-180px)';
+    front.style.transform = 'translateZ(180px)';
+    
+    if(screen.width >= 1650){
+        setTimeout( () => {
+            setTimeout( () =>{
+                bottom.style.top = '125px';
+                setTimeout( () => {
+                    bottom.classList.add('fly')
+                    document.querySelector('.hobbies').style.display = 'block';
+                },500)
+        
+            },500)
+        
+            setTimeout( () =>{
+                toP.style.bottom = '125px';
+                setTimeout( () => {
+                    toP.classList.add('fly')
+                },500)
+            },1500)
+        
+            setTimeout( () =>{
+                left.style.right = '125px';
+                setTimeout( ()=>{
+                    left.classList.add('fly')
+                },500)
+            },2500)
+        
+            setTimeout( () =>{
+                right.style.left = '125px';
+                setTimeout( ()=>{
+                    right.classList.add('fly')
+                },700)
+            },3300)
+        
+            setTimeout( () =>{
+                back.style.transform = 'translateZ(-125px)';
+                setTimeout( ()=>{
+                    back.classList.add('fly')
+                },500)
+            },4500)
+        
+            setTimeout( () =>{
+                front.style.transform = 'translateZ(125px)';
+                setTimeout( () =>{
+                    front.classList.add('fly')
+                },500)
+            },5500)
+        },1000)
+    
+            setTimeout( () =>{
+                anime.play;
+            },7000)
+    }else if(screen.width < 1650){
+        setTimeout( () => {
+            document.querySelector('.hobbies2').style.display = 'block';
+        },500)
     }
-});
 
-// tv glow on projects section
+})
+
+// ===========================Monitor1===================================================================
+
 let backGround = document.querySelector('#background');
 let purple1 = document.querySelectorAll('#purple-1');
 let purple2 = document.querySelectorAll('#purple-2');
@@ -35,7 +101,6 @@ let purple3 = document.querySelector('#purple-3')
 let purple4 = document.querySelector('#purple-4');
 let image = document.querySelector('#image-tv');
 let tvButtons = document.querySelectorAll('.tv-button a');
-
 
 
 window.addEventListener('scroll',()=>{
@@ -235,12 +300,14 @@ window.addEventListener('scroll',()=>{
     };
 });
 
+// ==========================Monitor2=====================================================================
+
 let green1 = document.querySelectorAll('#green-1');
 let green2 = document.querySelectorAll('#green-2');
 let green3 = document.querySelector('#green-3');
 let greenPower = document.querySelector('#green-power');
 let xpozeBack = document.querySelector('#xpoze-background');
-let xpoze = document.querySelector('#xpoze-1');
+let xpoze = document.querySelector('#xpoze-image');
 let greenVest = document.querySelectorAll('#green-vest');
 let xpozeButtons = document.querySelector('.xpoze-button a')
 
@@ -270,9 +337,9 @@ window.addEventListener('scroll', () => {
 
     setTimeout( () => {
         if( topLink > 3860 && topLink < 5000 ){
-            green3.classList.add('purple-tv');
+            green3.classList.add('xpoze-glow');
         }else{
-            green3.classList.remove('purple-tv');
+            green3.classList.remove('xpoze-glow');
         }
     },2000)
 
@@ -341,9 +408,9 @@ window.addEventListener('scroll', () => {
     
         setTimeout( () => {
             if( topLink > 3800 && topLink < 5000 ){
-                green3.classList.add('purple-tv');
+                green3.classList.add('xpoze-glow');
             }else{
-                green3.classList.remove('purple-tv');
+                green3.classList.remove('xpoze-glow');
             }
         },2000)
     
@@ -411,9 +478,9 @@ window.addEventListener('scroll', () => {
     
         setTimeout( () => {
             if( topLink > 3400 && topLink < 5000 ){
-                green3.classList.add('purple-tv');
+                green3.classList.add('xpoze-glow');
             }else{
-                green3.classList.remove('purple-tv');
+                green3.classList.remove('xpoze-glow');
             }
         },2000)
     
@@ -462,48 +529,15 @@ window.addEventListener('scroll', () => {
 })
 
 
-
-
-// opening image slider on projects page
-let imageSlider = document.querySelector('.image-slider');
-let blur = document.getElementById('blur');
-let popUp = document.querySelector('#carouselExampleFade');
-let project1 = document.querySelector('.project1');
-let projectsHeader = document.querySelector('.projects-header');
-let linkedIn = document.querySelector('.linked-in');
-let xpozE = document.querySelector('.xpoze');
-
-imageSlider.addEventListener('click', () => {
-    popUp.classList.add('visible');
-    blur.classList.add('active');
-    blur.style.width = '100%';
-    project1.style.display = "none";
-    projectsHeader.style.display = "none";
-    xpozE.style.display = 'none';
-});
-
-blur.addEventListener('click', (event) => {
-    if(event.target.classList.contains('active')){
-        popUp.classList.remove('visible');
-        blur.classList.remove('active');
-        project1.style.display = "block";
-        projectsHeader.style.display = "block";
-        blur.style.width = '90%';
-        xpozE.style.display = 'block';
-    }
-})
-
-linkedIn.addEventListener('click',() => {
-    const topLink = window.pageYOffset;
-})
+// ====================== social media buttons ============================================================
 
 let list = document.querySelectorAll('.sci li');
-let bg1 = document.querySelector('.section4');
+let bg1 = document.querySelector('.section5');
 
 list.forEach( el => {
     el.addEventListener('mouseenter', (event) =>{
         let color = event.target.getAttribute('data-color');
-        bg1.style.backgroundColor = color;
+        bg1.style.setProperty('background-color',color, 'important');
     })
     el.addEventListener('mouseleave', (event) =>{
         let color = event.target.getAttribute('data-color');
@@ -511,73 +545,16 @@ list.forEach( el => {
     })
 })
 
-let box = document.querySelector('.box');
-let left = document.querySelector('#Left')
-let right = document.querySelector('#Right')
-let bottom = document.querySelector('#Bottom')
-let front = document.querySelector('#Front')
-let back = document.querySelector('#Back')
-let toP = document.querySelector('#Top')
+// ======================== scroll icon =============================================================
 
+// icon functionality 
+const scroll = document.querySelector('.top-link');
 
-document.querySelector('.box-button').addEventListener('click', () => {
-    box.style.animation = 'none';
-    left.style.right = '180px';
-    right.style.left = '180px';
-    toP.style.bottom = '180px';
-    bottom.style.top = '180px';
-    back.style.transform = 'translateZ(-180px)';
-    front.style.transform = 'translateZ(180px)';
-    
-
-    setTimeout( () => {
-        setTimeout( () =>{
-            bottom.style.top = '125px';
-            setTimeout( () => {
-                bottom.classList.add('fly')
-                document.querySelector('.hobbies').style.display = 'block';
-            },500)
-    
-        },500)
-    
-        setTimeout( () =>{
-            toP.style.bottom = '125px';
-            setTimeout( () => {
-                toP.classList.add('fly')
-            },500)
-        },1500)
-    
-        setTimeout( () =>{
-            left.style.right = '125px';
-            setTimeout( ()=>{
-                left.classList.add('fly')
-            },500)
-        },2500)
-    
-        setTimeout( () =>{
-            right.style.left = '125px';
-            setTimeout( ()=>{
-                right.classList.add('fly')
-            },700)
-        },3300)
-    
-        setTimeout( () =>{
-            back.style.transform = 'translateZ(-125px)';
-            setTimeout( ()=>{
-                back.classList.add('fly')
-            },500)
-        },4500)
-    
-        setTimeout( () =>{
-            front.style.transform = 'translateZ(125px)';
-            setTimeout( () =>{
-                front.classList.add('fly')
-            },500)
-        },5500)
-    },1000)
-
-        setTimeout( () =>{
-            anime.play;
-        },7000)
-
-})
+window.addEventListener('scroll', () => {
+    const topLink = window.pageYOffset;
+    if(topLink > 500) {
+        scroll.classList.add('show-link');
+    } else {
+        scroll.classList.remove('show-link');
+    }
+});

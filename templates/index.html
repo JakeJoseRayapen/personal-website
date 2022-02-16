@@ -13,6 +13,7 @@
     <title> Jake Rayapen </title>
     </head>
     <body>
+    <!-- nav bar -->
     <header id="home" class="primary-header d-flex justify-content-between">
         <div>
             <img class="logo" src="{{ url_for('static' , filename='eye-logo.png') }}">
@@ -48,6 +49,7 @@
     </section>
     <!-- About me-->
     <section class="section2" id="section2">
+        <div class="container">
         <div class="my-about-wrapper">
             <h1 class="about" data-aos='slide-up'>About</h1>
             <span class="my-self">Me, myself and I</span>
@@ -73,9 +75,12 @@
           <a class="box-button" data-title="Hobbies"></a>
           <h1 class="hobbies">H<span>O</span><span>B</span><span>B</span><span>I</span><span>E</span><span>S</span></h1>
         </div>
+        </div>
     </section>
     <!--My coding journey-->
     <section class="section3" id="section3">
+        <div class="container">
+          <div class="row">
         <h1 class="text-skills" data-aos="slide-up">Skills</h1>
         <div class="acquired-skills" id=my-skills>
             <div class="description" data-aos="fade-up">
@@ -131,6 +136,8 @@
                   </ul>
                </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
     <!-- My projects -->
@@ -535,7 +542,7 @@
       </div>
     </section>
     <!-- Contact me page -->
-    <section class="section4" id="section4">
+      <div class="container-fluid">
         <div class="contact-description" data-aos="slide-up">
         <h2>Let's talk</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, 
@@ -568,8 +575,8 @@
             <textarea name="text" placeholder="Say hi!"></textarea><br>
             <button class="contact-button" type="submit">Send</button>
         </form>
-        </div>
-    </section>
+      </div>
+      </div>
     <a class="scroll-link top-link" href="#">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>

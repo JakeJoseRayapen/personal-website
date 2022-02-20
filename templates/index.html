@@ -6,12 +6,13 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}">  <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}">
+        <link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename='pictures/favicon.png') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- By michalsnik on Github -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Font awesome icon-->
     </head>
-    <body>
+    <body class="active">
     <!-- nav bar -->
     <header id="home" class="primary-header d-flex justify-content-between">
         <div>
@@ -42,8 +43,8 @@
     <div class="container">
         <div class="d-sm-flex">
             <div class="text-box">
-                <h1 >I'm <span class="auto-input"></span></h1>
-                <button>Resume</button>
+                <h1>I'm <span class="auto-input"></span></h1>
+                <a href="/resume">Resume</a>
             </div>
             <div>
                 <img class="img-fluid d-none d-sm-block">
@@ -59,7 +60,7 @@
                     <h1 class="about" data-aos='slide-up'>About</h1>
                     <span class="my-self">Me, myself and I</span>
                     <div id="para1" data-aos="fade-in">
-                      <p>My name is Jake Rayapen, 24 years old, living in a small island situated in the Indian Ocean. I live to think of myself as a simple man, funny stuff make me laugh, sad movies make me cry and i dont like to write on the left side of a copybook. One of my strengths would be being able to cook 1 minute rice in 58 seconds and one of my weaknesses would definitely choosing <span style="color:#78d492">font sizes</span>. My hobbies are:</p>
+                      <p>My name is Jake Rayapen, 24 years old, living in a small island situated in the Indian Ocean. I like to think of myself as a simple man, funny stuff make me laugh, sad movies make me cry and I don't like to write on the left side of a notebook. One of my strengths would be being able to cook 1 minute rice in 58 seconds and one of my weaknesses would be definitely choosing <span style="color:#78d492">font sizes</span>. My hobbies are:</p>
                     </div>
             </div>
             </div>
@@ -597,15 +598,12 @@
       </div>
     </section>
     <!-- Contact me -->
-    <section id="section5" class="section5 mx-auto" style="min-height:105vh; margin-top: 8rem;">
+    <section id="section5" class="section5 mx-auto" style="min-height:110vh; margin-top: 8rem;">
       <div class="container-fluid px-5">
         <div id="contact-description" class="row" data-aos="slide-up">
         <h2>Let's talk</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, 
-            expedita voluptates? Ut corrupti pariatur inventore facilis reprehenderit, 
-            aut tenetur iure Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, nobis quidem. 
-            Eos impedit assumenda illo omnis sunt magnam harum libero?</p>
-            <h1 class="contact d-flex justify-content-center" data-aos="slide-up">Contact me</h1>
+        <p class="d-flex justify-content-center">I'd love to connect with you. Use the form below to get in touch.</p>
+        <h1 class="contact d-flex justify-content-center" data-aos="slide-up">Contact me</h1>
         </div>
         <div id="contact-wrapper" class="row d-flex justify-content-between mt-4 align-items-center flex-column flex-md-row" data-aos="fade-up">
           <div class="social-media col-5 d-flex justify-content-center align-items-center h-100">

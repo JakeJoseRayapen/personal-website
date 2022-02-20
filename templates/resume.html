@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+        <link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename='pictures/favicon.png') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Bootstrap CSS -->
+    </head>
+    <body>
+        <!-- nav bar -->
+    <header id="home" class="primary-header d-flex justify-content-between">
+        <div>
+            <img class="logo" src="{{ url_for('static' , filename='pictures/eye-logo.png') }}">
+        </div>
+        <div class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"></div>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation d-flex" >
+                <li>
+                    <a href="/index#home"><span>01</span>Home</a>
+                </li>
+                <li>
+                    <a href="/index#section2"><span>02</span>About</a>
+                </li>
+                <li>
+                    <a href="/index#section3"><span>03</span>Journey</a>
+                </li>
+                <li>
+                    <a href="/index#blur"><span>04</span>Projects</a>
+                </li>
+                <li><a href="/index#section5"><span>05</span>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="particles-js"></div>
+    <section class="resume-section">
+        <div class="container-fluid">
+            <div id="resume" class="row d-flex justify-content-center">
+                <img src="{{ url_for('static',filename='pictures/resume1.PNG') }}">
+                <img src="{{ url_for('static',filename='pictures/resume2.PNG') }}">
+            </div>
+            <div id="resume-button" class="row d-flex justify-content-center mt-5">
+                <a href="{{ url_for('static',filename='resume.pdf') }}" download="newfilename">Download</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    // hamburger for mobile users
+
+    const primaryNav = document.querySelector(".primary-navigation");
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+
+    navToggle.addEventListener('click' , () => {
+        const visibilty = primaryNav.getAttribute('data-visible');
+        if (visibilty === 'false'){
+            primaryNav.setAttribute('data-visible' , true);
+            navToggle.setAttribute('aria-expanded',true);
+        } else if (visibilty === 'true'){
+            primaryNav.setAttribute('data-visible', false);
+            navToggle.setAttribute('aria-expanded' , false)
+        }
+    });
+
+
+    // Image hover 
+    var resume = document.querySelector('.resume-section');
+    var image1 = document.querySelector('#resume img:first-child');
+    var image2 = document.querySelector('#resume img:nth-child(2)');
+
+    image1.addEventListener('click', () =>{
+        image2.style.display = 'none';
+        image1.classList.add('expand');
+    })
+
+    resume.addEventListener('click', (event)=>{
+        if(event.target.classList.contains('expand') == false){
+        image2.style.display = 'block';
+        image1.classList.remove('expand');
+        }
+    })
+
+    image2.addEventListener('click', () =>{
+        image1.style.display = 'none';
+        image2.classList.add('expand');
+    })
+
+    resume.addEventListener('click', (event)=>{
+        if(event.target.classList.contains('expand') == false){
+        image1.style.display = 'block';
+        image2.classList.remove('expand');
+        }
+    })
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> <!-- particle.js-->
+    <script>
+        particlesJS.load('particles-js',"{{ url_for('static',filename='particles.json') }}", function() {
+        console.log('callback - particles.js config loaded');
+        });
+    </script> <!-- Particles.js -->
+    </body>
+</html>

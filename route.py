@@ -10,6 +10,7 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 mail = Mail(app)
 
+@app.route('/welcome', methods = ['GET','POST'])
 @app.route("/" , methods = ['GET','POST'])
 def home():
     return render_template("welcome.html")
@@ -18,8 +19,6 @@ def home():
 def index():
     if request.method == 'POST':
         msg = request.form.get('message')
-
-
         message = Message("subject",sender="jakerayapenn@gmail.com",recipients=['jakerayapen@hotmail.com'])
         message.body = msg
         mail.send(message)       
@@ -27,6 +26,10 @@ def index():
     else:
 
         return render_template('index.html')
+
+@app.route('/resume', methods=['GET','POST'])
+def resume():
+    return render_template('resume.html')
 
 if __name__ == '__main__':
     app.run(debug=True) 

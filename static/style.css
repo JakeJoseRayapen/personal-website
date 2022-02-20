@@ -24,7 +24,7 @@ body {
   margin: 0px;
   padding: 0px;
   min-height: 100%;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 html::-webkit-scrollbar {
@@ -303,12 +303,13 @@ section {
 }
 
 /* From cssbuttons.io */
-.text-box button {
+.text-box a {
   border: 2px solid var(--main-green);
   padding: 10px 25px;
   color: var(--main-green);
   font-size: 15px;
   font-weight: bold;
+  text-decoration: none;
   background-color: transparent;
   border-radius: 10%;
   outline: none;
@@ -321,7 +322,7 @@ section {
   margin-top: 70px;
 }
 
-.text-box button::after {
+.text-box a::after {
   pointer-events: none;
   content: "";
   position: absolute;
@@ -335,19 +336,16 @@ section {
   transform: perspective(1.5em) rotateX(35deg) scale(0.3, 0.1);
 }
 
-.text-box button:hover {
+.text-box a:hover {
   color: #fff;
   background-color: var(--main-green);
   box-shadow: 0 0 1em 0.25em #fff, 0 0 4em 2em var(--main-green),
     inset 0 0 0.75em 0.25em var(--main-green);
 }
 
-.text-box button:active {
+.text-box a:active {
   box-shadow: 0 0 0.6em 0.25em #fff 0 0 2.5em 2em var(--main-green);
   /* inset 0 0 0.5em 0.25em var(--glow-color); */
-}
-
-@media (max-width: 770px) {
 }
 
 @media (min-width: 1200px) {
@@ -355,7 +353,7 @@ section {
     font-size: 75px;
     -webkit-box-reflect: below 1px linear-gradient(transparent, red);
   }
-  .text-box button {
+  .text-box a {
     margin-top: 150px;
   }
 }
@@ -1590,6 +1588,7 @@ section {
 .casa-summary p {
   color: var(--font-grey);
 }
+
 .casa-summary h1 span {
   color: var(--main-green);
   font-family: "Cutive Mono", sans-serif;
@@ -1832,9 +1831,22 @@ section {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 410px) {
+  .tv-button a {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .image-slider {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
   .xpoze-button a {
     left: -16%;
+  }
+  .tv-button {
+    left: -25%;
   }
 }
 
@@ -1855,6 +1867,7 @@ section {
 }
 #contact-description p {
   color: var(--font-grey);
+  font-size: 20px;
 }
 #contact-description h1 {
   font-size: 2.7rem;
@@ -1999,7 +2012,7 @@ textarea {
     font-size: 7rem;
   }
   #contact-description h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -2044,4 +2057,46 @@ textarea {
 .show-link {
   visibility: visible;
   z-index: 100;
+}
+
+/* ===========================================resume================================================= */
+
+#resume {
+  padding-top: 40px;
+  position: relative;
+}
+
+#resume img {
+  width: 300px;
+  height: auto;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+#resume img.expand {
+  width: 600px;
+}
+
+/* From cssbuttons.io by @adamgiebl */
+#resume-button a {
+  text-decoration: none;
+  z-index: 1;
+  width: 150px;
+  color: var(--main-green);
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#resume-button a:hover {
+  border: 1px solid var(--main-green);
+  transform: translateY(-7px);
+}
+
+#resume-button a:active {
+  box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
 }

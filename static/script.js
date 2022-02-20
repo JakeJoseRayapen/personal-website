@@ -233,7 +233,7 @@ window.addEventListener('scroll',()=>{
                 })
         },5500);
 
-    } else if(screen.width >= 768 && screen.width <= 1024){
+    } else if(screen.width >= 600 && screen.width <= 1024){
         purple1.forEach( purp => 
             {
         if(topLink > 2950 && topLink < 4500){
@@ -454,7 +454,7 @@ window.addEventListener('scroll', () => {
                 xpozeButtons.classList.remove('hov');
             }
         },5500)    
-    }else if(screen.width >= 768 && screen.width <= 1024){
+    }else if(screen.width >= 600 && screen.width <= 1024){
         setTimeout( () => {
             green1.forEach( green => {
                 if(topLink > 3400 && topLink < 5000 ){

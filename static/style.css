@@ -217,7 +217,7 @@ section {
   .mobile-nav-toggle {
     cursor: pointer;
     position: fixed;
-    background-color: #1877f2;
+    background-color: transparent;
     z-index: 999;
     width: 2rem;
     height: 2rem;
@@ -233,10 +233,10 @@ section {
     position: absolute;
     width: 20px;
     height: 2px;
-    background: #fff;
+    background: var(--main-green);
     transition: 0.2s;
     transform: translateY(-8px);
-    box-shadow: 0 8px 0 #fff;
+    box-shadow: 0 8px 0 var(--main-green);
   }
 
   .mobile-nav-toggle::after {
@@ -244,23 +244,23 @@ section {
     position: absolute;
     width: 20px;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--main-green);
     transform: translateY(8px);
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {
-    background-color: red;
+    background-color: transparent;
     position: fixed;
   }
 
   .mobile-nav-toggle[aria-expanded="true"]::before {
     transform: translateY(0px) rotate(45deg);
-    box-shadow: 0 0 0 #fff;
+    box-shadow: 0 0 0 var(--main-green);
   }
 
   .mobile-nav-toggle[aria-expanded="true"]::after {
     transform: translateY(0px) rotate(-45deg);
-    box-shadow: 0 0 0 #fff;
+    box-shadow: 0 0 0 var(--main-green);
   }
 }
 

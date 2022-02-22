@@ -20,7 +20,8 @@
 
 html,
 body {
-  background-color: var(--background) !important;
+  background-image: linear-gradient(to left, #070707 40%, #020412 50%);
+  /* background-color: var(--background) !important; */
   margin: 0px;
   padding: 0px;
   min-height: 100%;
@@ -29,10 +30,6 @@ body {
 
 html::-webkit-scrollbar {
   display: none;
-}
-
-section {
-  background: transparent !important;
 }
 
 /* nav and intro(section1) */
@@ -276,9 +273,20 @@ section {
     display: inline-block !important;
     margin-right: 3px;
   }
+  .primary-header {
+    background-image: linear-gradient(to left, #070707 40%, #020412 50%);
+  }
 }
 /* ==================================================Section 1============================================ */
 /* ======================================================================================================= */
+
+/* .section1 {
+  background-image: linear-gradient(to left, #070707 40%, #020412 50%);
+} */
+
+/* .jake-img {
+  opacity: 0.8;
+} */
 
 .text-box {
   position: relative;

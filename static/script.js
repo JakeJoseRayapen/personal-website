@@ -586,8 +586,9 @@ blur.addEventListener('click', (event) => {
 });
 
 
-let evilKermit = document.querySelectorAll('.evil-kermit');
+let evilKermit = document.querySelector('.evil-kermit');
+let body = document.querySelector('body');
 
 evilKermit.addEventListener('click', ()=>{
-    
+    body.classList.add('.dark-side');
 });

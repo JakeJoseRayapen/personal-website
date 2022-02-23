@@ -583,4 +583,11 @@ blur.addEventListener('click', (event) => {
         project1.style.setProperty('display','flex', 'important');
         project2.style.setProperty('display','flex', 'important');
     }
-})
+});
+
+
+let evilKermit = document.querySelectorAll('.evil-kermit');
+
+evilKermit.addEventListener('click', ()=>{
+    
+});

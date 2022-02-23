@@ -8,7 +8,8 @@
 }
 
 :root {
-  --main-green: #78d492;
+  --main-green: #3ad666;
+  /* --main-green: #78d492; */
   --light-grey: #d3d3d3;
   --mid-grey: #3a3939;
   --dark-grey: #1e1f22;
@@ -20,12 +21,17 @@
 
 html,
 body {
-  background-image: linear-gradient(to left, #070707 40%, #020412 50%);
-  /* background-color: var(--background) !important; */
+  /* background-image: linear-gradient(to left, #070707 40%, #020412 50%); */
+  background-color: var(--background) !important;
   margin: 0px;
   padding: 0px;
   min-height: 100%;
   /* z-index: 10; */
+  transition: all 2s ease-in;
+}
+
+body.dark-side {
+  background-image: linear-gradient(to left, #070707 40%, #020412 50%);
 }
 
 html::-webkit-scrollbar {
@@ -273,9 +279,6 @@ html::-webkit-scrollbar {
     display: inline-block !important;
     margin-right: 3px;
   }
-  .primary-header {
-    background-image: linear-gradient(to left, #070707 40%, #020412 50%);
-  }
 }
 /* ==================================================Section 1============================================ */
 /* ======================================================================================================= */
@@ -287,6 +290,19 @@ html::-webkit-scrollbar {
 /* .jake-img {
   opacity: 0.8;
 } */
+
+.evil-kermit {
+  position: absolute;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  transition: all 2s;
+}
+
+.evil-kermit:hover {
+  transform: translateX(-185px);
+}
 
 .text-box {
   position: relative;
@@ -429,6 +445,7 @@ html::-webkit-scrollbar {
 
 #para1 p span {
   font-size: 40px;
+  color: var(--main-green);
 }
 
 .btn {
@@ -1365,6 +1382,12 @@ html::-webkit-scrollbar {
   }
 }
 
+@media (min-width: 1400px) and (max-width: 1480px) {
+  .timeline:before {
+    background-image: linear-gradient(#78d492 52%, #1e1f22 52%);
+  }
+}
+
 @media screen and (min-width: 837px) and (max-width: 1400px) {
   .timeline-container {
     min-height: 700px !important;
@@ -1985,7 +2008,7 @@ input[type="email"] {
   border: none;
   padding: 5px 20px;
   background: #3a3939;
-  border-right: 1px solid #78d492;
+  border-right: 1px solid var(--main-green);
 }
 textarea {
   width: 100%;
@@ -2002,7 +2025,7 @@ textarea {
   outline: none;
   border: none;
   color: #3a3939;
-  background: #78d492;
+  background: var(--main-green);
   font-size: 0.875rem;
   cursor: pointer;
   display: flex;

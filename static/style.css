@@ -48,6 +48,7 @@ html::-webkit-scrollbar {
   width: 70px;
   height: 50px;
   margin-left: 30px;
+  cursor: pointer;
 }
 .primary-header {
   background-color: transparent;

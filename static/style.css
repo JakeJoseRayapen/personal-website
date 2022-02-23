@@ -21,17 +21,19 @@
 
 html,
 body {
-  background-image: linear-gradient(to left, #070707 40%, #020412 50%);
   background-color: var(--background) !important;
   margin: 0px;
   padding: 0px;
   min-height: 100%;
   /* z-index: 10; */
   transition: all 2s ease-in;
+  scrollbar-width: none;
 }
 
-body.dark-side {
-  background-image: linear-gradient(to left, #070707 40%, #020412 50%);
+@media (min-width: 1400px) {
+  body {
+    background-image: linear-gradient(to left, #070707 40%, #020412 50%);
+  }
 }
 
 html::-webkit-scrollbar {

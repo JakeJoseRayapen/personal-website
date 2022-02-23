@@ -584,11 +584,3 @@ blur.addEventListener('click', (event) => {
         project2.style.setProperty('display','flex', 'important');
     }
 });
-
-
-let evilKermit = document.querySelector('.evil-kermit');
-let body = document.querySelector('body');
-
-evilKermit.addEventListener('click', ()=>{
-    body.classList.add('.dark-side');
-});

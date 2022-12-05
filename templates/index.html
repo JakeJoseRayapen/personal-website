@@ -16,7 +16,7 @@
     <!-- nav bar -->
     <header id="home" class="primary-header d-flex justify-content-between">
         <div>
-            <img href="#home" class="logo" src="{{ url_for('static' , filename='pictures/eye-logo.png') }}">
+            <img href="#home" class="logo" src="{{ url_for('static' , filename='pictures/eye-logo.png') }}" alt="eye logo">
         </div>
         <div class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"></div>
         <nav>
@@ -47,11 +47,9 @@
                 <a href="/resume">Resume</a>
             </div>
             <div class="jake-img col-4 d-none d-xxl-block">
-                <img src="{{ url_for('static',filename='pictures/jake2.png') }}" class="img-fluid d-none d-sm-block">
+                <img src="{{ url_for('static',filename='pictures/jake2.png') }}" class="img-fluid d-none d-sm-block" alt="picture of jake rayapen">
             </div>
         </div>
-        <!-- <img class="evil-kermit" src="{{ url_for('static',filename='pictures/evilkermit2.png') }}">
-        <img class="goodboy d-none" src="{{ url_for('static',filename='pictures/goodboy.png') }}" > -->
     </div>
     </section>
     <!-- About Me -->
